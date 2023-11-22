@@ -1,7 +1,6 @@
 const router = require('express').Router();
+const userRouter = require('./user');
 
-router.get('/test', (req, res) => {
-  res.json({ message: 'API test route' });
-});
+router.use('/users', userRouter);
 
 module.exports = router;

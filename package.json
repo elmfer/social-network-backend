@@ -4,7 +4,8 @@
   "description": "A backend for a social media website that stores users' profiles and posts using a MongoDB database.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",

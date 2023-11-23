@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const ReactionSchema = require('./Reaction');
 
 function dateFormat() {
   return (new Date()).toLocaleDateString();

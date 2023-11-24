@@ -3,6 +3,9 @@
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
  
 A backed for a social media website. It stores users' profiles, thier thoughts, and reactions to those those thought. Additionally, users can add friends to thier friends list. Everything is stored in a MongoDB database.
+
+Walkthrough:
+[![Watch the video](./assets/images/screenshot.png)](https://drive.google.com/file/d/14qKW8S_1F0ip07Nksvex-Atl00Wtem8h/view?usp=sharing)
  
 ## Table Of Contents
 1. [Installation](#installation)

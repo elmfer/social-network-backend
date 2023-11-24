@@ -110,7 +110,15 @@ thoughtRouter.post('/:id/reactions', async (req, res) => {
       return;
     }
 
-    const query = Thought.findByIdAndUpdate(new ObjectId(req.params.id), {
+    // Check if user exists
+    let query = User.findOne({ username: req.body.username });
+    const user = await query.exec();
+    if(!user) {
+      res.status(400).json({ message: "User does not exist." });
+      return;
+    }
+
+    query = Thought.findByIdAndUpdate(new ObjectId(req.params.id), {
       $addToSet: { reactions: req.body }
     });
     const thought = await query.exec();

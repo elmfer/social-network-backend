@@ -132,7 +132,7 @@ thoughtRouter.post('/:id/reactions', async (req, res) => {
 thoughtRouter.delete('/:id/reactions/:reactionId', async (req, res) => {
   try {
     const query = Thought.findByIdAndUpdate(new ObjectId(req.params.id), {
-      $pull: { reactions: { _id: new ObjectId(req.params.reactionId) } }
+      $pull: { reactions: { _id: req.params.reactionId } }
     });
     const thought = await query.exec();
 

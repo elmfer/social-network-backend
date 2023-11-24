@@ -105,7 +105,7 @@ userRouter.post('/:id/friends/:friendId', async (req, res) => {
     }
 
     query = User.findByIdAndUpdate(new ObjectId(req.params.id), {
-      $addToSet: { friends: new ObjectId(req.params.friendId) }
+      $addToSet: { friends: req.params.friendId }
     });
     let user = await query.exec();
 

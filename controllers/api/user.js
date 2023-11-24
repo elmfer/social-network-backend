@@ -1,6 +1,7 @@
 const userRouter = require('express').Router();
 const { ObjectId } = require('mongodb');
 const User = require('../../models/User');
+const Thought = require('../../models/Thought');
 
 userRouter.get('/', async (req, res) => {
   try {

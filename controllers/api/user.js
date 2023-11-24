@@ -65,6 +65,11 @@ userRouter.delete('/:id', async (req, res) => {
     const thoughtQuery = Thought.deleteMany({ username: user.username });
     await thoughtQuery.exec();
 
+    // Remove user from friends' friends array fields
+    const friendQuery = User.updateMany({}, {
+      $pull: { friends: user._id }
+    });
+
     res.status(200).json(user);
   } catch(err) {
     res.status(500).json({ message: err.message });
